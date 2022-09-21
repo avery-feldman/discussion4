@@ -19,7 +19,7 @@ class Dice:
 
 
     # create the roll method
-    def roll_method(self):
+    def roll(self):
     # it randomly picks a value from 1 to the number of sides this dice object has
         randomint = random.randint(1, self.side)
     # it adds that value to the end of the list that tracks all the rolls
@@ -65,3 +65,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
