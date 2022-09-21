@@ -5,18 +5,27 @@ import random
 class Dice:
     # create the constructor (__init__) method
     # it takes as input the number sides and if none is specified use 6
+    def __init__(self, side=6):
     # it sets the dice object's number of sides (instance variable)
+        self.side = side
     # it sets the list that tracks the rolls to the empty list (instance variable)
+        self.rolls_list = []
 
 
     # create the __str__ method
+    def __str__(self):
     # it returns "Last roll: value" where value is the last value in the list that tracks the rolls
+        return "Last roll: " + str(self.rolls_list[-1])
 
 
     # create the roll method
+    def roll_method(self):
     # it randomly picks a value from 1 to the number of sides this dice object has
+        randomint = random.randint(1, self.side)
     # it adds that value to the end of the list that tracks all the rolls
+        self.rolls_list.append(randomint)
     # it returns the value
+        return randomint
 
 
     # BONUS
